@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #003366; /* Azul escuro */
+}
+
+body {
+    background-color: #F8F9FA; /* Fundo suave para melhor contraste */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2; /* Menos opacidade para não distrair */
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px; /* Diminuindo o tamanho máximo para 450px */
+    min-height: 40vh; /* Aumentando a altura mínima */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizando o conteúdo */
+    justify-content: center; /* Centralizando o conteúdo */
+    border-radius: 20px; /* Borda mais arredondada */
+    border: 1px solid #1875E8; /* Borda azul */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    background-image: url("img/Ruido.png");
+    background-size: cover;
+    padding: 1.5rem; /* Aumentando o padding para mais espaço */
+}
+
+.container__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizando o conteúdo */
+    width: 100%;
+    text-align: center; /* Centralizando o texto */
+}
+
+.container__informacoes {
+    width: 100%;
+}
+
+.container__texto {
+    margin-bottom: 1.5rem; /* Aumentando o espaçamento */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizando o texto */
+}
+
+.container__texto-azul {
+    color: #1875E8;
+    display: block;
+    font-weight: 700; /* Negrito para destaque */
+}
+
+.container__campo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizando o campo */
+    width: 100%;
+    margin-bottom: 1.5rem; /* Aumentando o espaçamento */
+}
+
+.container__input {
+    width: 100%;
+    max-width: 300px; /* A largura máxima do campo de entrada */
+    height: 50px; /* Aumentando a altura do input */
+    border-radius: 12px;
+    background-color: #e9e9e9; /* Fundo branco */
+    border: 1px solid #CED4DA; /* Borda cinza suave */
+    color: #003366; /* Azul escuro */
+    padding: 0 1rem; /* Padding lateral para o texto */
+    font-size: 16px;
+    font-weight: 400; /* Peso normal */
+    margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.container__input:focus {
+    border-color: #1875E8; /* Azul claro ao focar */
+    box-shadow: 0 2px 12px rgba(24, 117, 232, 0.4);
+}
+
+.container__botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizando os itens */
+    justify-content: center; /* Centralizando os itens */
+    gap: 1.5rem; /* Aumentando o espaço entre os botões */
+    width: 100%;
+    max-width: 300px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza a seção de botões */
+}
+
+.container__botao,
+.container__botao-desabilitado {
+    border-radius: 16px;
+    align-items: center; 
+    padding: 12px; /* Aumentando o padding para aumentar o tamanho do botão */
+    font-size: 18px; /* Ajustando o tamanho da fonte */
+    font-weight: 700; /* Negrito para destaque */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%; /* Garantindo que os botões ocupem 100% do espaço */
+}
+
+.container__botao:hover {
+    background: #1354A5; /* Azul escuro ao passar o mouse */
+}
+
+.container__botao-desabilitado {
+    background: #6f6f70;
+    cursor: not-allowed;
+    width: 100%; /* Garantindo que os botões ocupem 100% da largura */
+    align-items: center; 
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    font-size: 36px; /* Ajustando para um tamanho mais harmonioso */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem; /* Aumentando o espaçamento inferior */
+}
+
+.texto__paragrafo {
+    color: #003366; /* Azul escuro */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5; /* Melhorando a legibilidade */
+}
+
+.container__imagem-pessoa {
+    max-width: 20%; /* Ajuste da imagem para 20% */
+    height: auto;
+    margin-top: 1rem; /* Espaçamento acima da imagem */
+    display: block; /* Garantir que a imagem fique centralizada */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem; /* Reduzindo o padding em dispositivos menores */
+        border-radius: 15px; /* Arredondando as bordas */
+    }
+
+    h1 {
+        font-size: 28px; /* Tamanho da fonte para dispositivos menores */
+    }
+
+    .container__input {
+        font-size: 14px; /* Tamanho da fonte para dispositivos menores */
+        height: 40px; /* Altura do campo de entrada */
+    }
+
+    .container__imagem-pessoa {
+        max-width: 30%; /* Ajuste para mobile */
+        margin-top: 1rem; /* Menos espaço acima da imagem em mobile */
+    }
+}
+
